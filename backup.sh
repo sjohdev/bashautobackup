@@ -54,19 +54,22 @@ declare -a toBackup
 
 # Extract filelist (incl. hidden files) with timestamps in seconds 
 # since 1970: 
-ls -A -lt --time-style=+%s
-
-for file in  # [TASK 9]
-do
+# [TASK 9]
+filenamesList=($(find -type f | cut -c 3-))
+for file in ${filenamesList[@]}; do
   # [TASK 10]
-  if (())
+  file_last_modified_date=$(date -r $file +%s)
+  if [[ $file_last_modified_date -gt $yesterdayTS ]]
   then
     # [TASK 11]
+    toBackup+=($file)
   fi
 done
 
 # [TASK 12]
+tar -czvf $backupFileName ${toBackup[@]}
 
 # [TASK 13]
+mv $backupFileName destAbsPath
 
 # Congratulations! You completed the final project for this course!

@@ -54,8 +54,10 @@ echo "$yesterdayTS"
 
 # Extract timestamps from all files in a directory: 
 tsList=($(ls -A -l --time-style=+%s | grep -oE "[0-9]{10}\s.+$" | cut -d " " -f 1))
-filenameList=($(ls -A -l --time-style=+%s | grep -oE "[0-9]{10}\s.+$" | cut -d " " -f 2))
+filenamesList=($(find -type f | cut -c 3-))
 echo "Filenames:"
-echo "${filenameList[@]}"
+echo "${filenamesList[@]}"
 echo "Timestamps: "
 echo "${tsList[@]}"
+
+#tar -czvf $backupFileName ${filenamesList[@]}
