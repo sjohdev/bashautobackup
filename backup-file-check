@@ -1,0 +1,9 @@
+total 64
+-rw-r--r--. 1 badblob badblob  4426 Sep 11 14:34 backup-1789130048.tar.gz
+-rw-r--r--. 1 badblob badblob     0 Sep 11 14:37 backup-file-check
+-rwxr--r--. 1 badblob badblob  1547 Sep 11 14:33 backup.sh
+drwxr-xr-x. 1 badblob badblob    42 Sep 11 14:34 important-documents
+-rw-r--r--. 1 badblob badblob  4995 Sep 28  2022 important-documents.zip
+-rw-r--r--. 1 badblob badblob 35149 Sep 10 20:30 LICENSE
+-rw-r--r--. 1 badblob badblob   236 Sep 10 20:30 README.md
+-rwxr--r--. 1 badblob badblob  1396 Sep 11 13:18 tempscript.sh
