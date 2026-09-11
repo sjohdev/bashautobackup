@@ -1,0 +1,2 @@
+badblob@lv426:~/coding/bashautobackup$ crontab -l
+*/0 0 * * * /usr/local/bin/backup.sh /home/coding/bashautobackup/important-documents /home/coding/bashautobackup

@@ -1,0 +1,5 @@
+sudo cp backup.sh /usr/local/bin
+[sudo] password for badblob: 
+badblob@lv426:~/coding/bashautobackup$ ls -l /usr/local/bin
+total 4
+-rwxr--r--. 1 root root 1547 Sep 11 14:41 backup.sh

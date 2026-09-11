@@ -27,7 +27,7 @@ echo "$destinationDirectory"
 currentTS=$(date +%s)
 
 # [TASK 4]
-backupFileName="backup-$currentTS.tar.gz"
+backupFileName="backup-${currentTS}.tar.gz"
 
 # We're going to:
   # 1: Go into the target directory
@@ -41,7 +41,7 @@ origAbsPath=$(pwd)
 
 # [TASK 6]
 cd $destinationDirectory
-destDirAbsPath=$(pwd)
+destAbsPath=$(pwd)
 
 # [TASK 7]
 cd $origAbsPath
@@ -70,6 +70,6 @@ done
 tar -czvf $backupFileName ${toBackup[@]}
 
 # [TASK 13]
-mv $backupFileName $destDirAbsPath
+mv $backupFileName $destAbsPath
 
 # Congratulations! You completed the final project for this course!
